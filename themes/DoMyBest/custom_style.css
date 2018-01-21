@@ -19,7 +19,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	border:1px solid #000000;
 }
 #content{
-	width:700px;
+/*  Width 제거 
+	width:700px; */
 	float: left;
 	margin-bottom:10px;
 	border: 1px solid #000000;
@@ -82,6 +83,7 @@ template {
 
 a {
 	background-color: transparent;
+	text-decoration:none;
 }
 
 a:active,
@@ -246,6 +248,24 @@ table {
 td,
 th {
 	padding: 0;
+}
+/*-------------------------------------------------------------
+   RICHARD-CHOI 2018-1-21
+## Basic style change
+--------------------------------------------------------------*/   
+ul{
+   list-style:none;
+   margin:0;
+   padding:0;
+}
+li{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	boarder:0;
+	float:left;
+}	
+li#categories-2 ul li{
+    float:none; 
 }
 /*--------------------------------------------------------------
 ## Menus underscore.me
@@ -765,7 +785,9 @@ span + .edit-link:before,
 	border-top: 1px solid #000;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	clear: both;
+/* 화면 내용 표시를 위해 	
 	color: rgba(255, 255, 255, 0.7);
+*/	
 	margin-top: -1px;
 	padding: 0 10px;
 	position: relative;
@@ -1069,7 +1091,10 @@ span + .edit-link:before,
 		float: left;
 		margin: 0 0 0 -100%;
 		min-height: 100vh;
+/* 좌측 사이드바 크기를 조정 		
 		width: 122px;
+*/
+        width: 200px; 
 	}
 	
 }
