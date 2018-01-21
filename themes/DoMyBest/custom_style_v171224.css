@@ -1,0 +1,162 @@
+/*
+Theme Name: DoMyBest
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: DoMyBest
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*Layout*/ 
+#header{
+	margin-bottom:10px;
+	border:1px solid #000000;
+}
+#content{
+	width:700px;
+	float: left;
+	margin-bottom:10px;
+	border: 1px solid #000000;
+}
+#sidebar{
+	margin-left: 710px;
+	min-width: 300px;
+/*	float: right; */
+	border:1px solid #000000; 
+}
+#footer{
+    clear: both;
+    border: 1px solid #000000;
+}	
+
+/* test_box */
+.test_box{
+	display:inline-block;
+	width:500px;
+	height:25px;
+	margin:1em;
+	border:1px solid #000000;
+}
+/* Menu */ 
+ul.menu li{
+list-style-type:none;  /*리스트에 있는 점 지우기*/ 
+}	
+ul.sub-menu {display:none;} /*서브메뉴들 안 보이게 */ 
+/* 메뉴 1차 항목 */ 
+ul.menu > li{
+display: inline-block; 
+width: 300px; height:40px;
+}
+ul.menu >li >a{
+	display: block; width:100%; height:100% ; 
+	text-align:center; 
+	color:white;
+	background: #333333; 
+}
+/* 메뉴 1차항목 마우스 오버되면 블럭 생상 변경, 글자 색상 변경 */
+ul.menu > li>a:hover{
+color: white; 
+background: #447799; 
+}
+/* 메뉴1차 마우수 오버하면 서브메뉴 보이게*/ 
+ul.menu li:hover ul.sub-menu{
+display:block;
+width:300px;height:30px;
+}	
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
